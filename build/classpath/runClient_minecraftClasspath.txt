@@ -1,4 +1,4 @@
-C:\Users\stirl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.2-48.1.0_mapped_official_1.20.2\forge-1.20.2-48.1.0_mapped_official_1.20.2.jar
+C:\Users\stirl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.2-48.1.0_mapped_parchment_2023.10.08-1.20.2\forge-1.20.2-48.1.0_mapped_parchment_2023.10.08-1.20.2.jar
 C:\Users\stirl\.gradle\caches\forge_gradle\minecraft_repo\versions\1.20.2\client-extra.jar
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlearlydisplay\1.20.2-48.1.0\b5951e49178b49352d118c441c5ae3218ed5db26\fmlearlydisplay-1.20.2-48.1.0.jar
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.2-48.1.0\d034c6f69f1f1cf324bdd7bbc66896e67990bbef\javafmllanguage-1.20.2-48.1.0.jar
@@ -14,7 +14,7 @@ C:\Users\stirl\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr30
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\24.0.1\13c5c75c4206580aa4d683bffee658caae6c9f43\annotations-24.0.1.jar
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.1\1227f9e0666314f9de41477e3ec277e542ed7f7b\java-objc-bridge-1.1.jar
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mergetool\1.1.7\aa7c6d9d187d585a8a215c288d65b0038be80b2a\mergetool-1.1.7-api.jar
-C:\Users\stirl\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\mapping\1.20.2\mapping-1.20.2-mapping.zip
+C:\Users\stirl\.gradle\caches\parchmentgradle\org\parchmentmc\data\parchment-1.20.2\2023.10.08\parchment-1.20.2-2023.10.08.zip
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\eventbus\6.2.0\861291db776b4817a800758311a88c9a42a55e9\eventbus-6.2.0.jar
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\coremods\5.1.0\51c71425f6b216763c7a452b31d51ffa20de8804\coremods-5.1.0.jar
 C:\Users\stirl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\forgespi\7.1.0\48348f02f312527ac7b5f1e9105c4cb01a875b0c\forgespi-7.1.0.jar
