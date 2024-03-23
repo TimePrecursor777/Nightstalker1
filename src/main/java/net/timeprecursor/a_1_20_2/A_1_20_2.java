@@ -138,6 +138,9 @@ public class A_1_20_2 {
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(Moditems.SAPPHIRE);
+        }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
