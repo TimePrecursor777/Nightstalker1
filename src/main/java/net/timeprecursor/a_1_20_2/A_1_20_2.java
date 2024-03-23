@@ -21,17 +21,29 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.IModBusEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.timeprecursor.a_1_20_2.itemstuff.Moditems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(A_1_20_2.MODID)
 public class A_1_20_2 {
+
+
+
+
+
+
+
+
+
+
 
     // Define mod id in a common place for everything to reference
     public static final String MODID = "a_1_20_2";
@@ -63,6 +75,30 @@ public class A_1_20_2 {
 
     public A_1_20_2() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        //MY STUFF-----
+
+        Moditems.register(modEventBus);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
