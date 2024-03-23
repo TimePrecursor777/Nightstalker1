@@ -1,2 +1,4 @@
 /summon
 /summon minecraft:allay
+/reload
+/reload files
