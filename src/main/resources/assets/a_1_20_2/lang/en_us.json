@@ -1,3 +1,6 @@
 {
-  "Item.a_1_20_2.sapphire": "Sapphire"
+  "item.a_1_20_2.sapphire": "Sapphire",
+  "item.a_1_20_2.raw_sapphire": "Raw Sapphire",
+
+  "creativetab.tutorial_tab": "Sapphire Tutorial Tab"
 }

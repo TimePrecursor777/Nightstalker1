@@ -28,6 +28,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.timeprecursor.a_1_20_2.itemstuff.ModCreateModeTabs;
 import net.timeprecursor.a_1_20_2.itemstuff.Moditems;
 import org.slf4j.Logger;
 
@@ -76,7 +77,7 @@ public class A_1_20_2 {
     public A_1_20_2() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         //MY STUFF-----
-
+        ModCreateModeTabs.register(modEventBus);
         Moditems.register(modEventBus);
 
 
@@ -133,6 +134,11 @@ public class A_1_20_2 {
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
+
+
+
+
+
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
@@ -140,6 +146,7 @@ public class A_1_20_2 {
             event.accept(EXAMPLE_BLOCK_ITEM);
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(Moditems.SAPPHIRE);
+            event.accept(Moditems.RAW_SAPPHIRE);
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
