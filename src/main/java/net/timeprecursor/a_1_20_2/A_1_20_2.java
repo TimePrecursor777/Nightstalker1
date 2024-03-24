@@ -2,6 +2,7 @@ package net.timeprecursor.a_1_20_2;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -28,6 +29,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.timeprecursor.a_1_20_2.entity.client.NightstalkerRenderer;
 import net.timeprecursor.a_1_20_2.entity.modentities;
 import net.timeprecursor.a_1_20_2.itemstuff.ModCreateModeTabs;
 import net.timeprecursor.a_1_20_2.itemstuff.Moditems;
@@ -164,6 +166,7 @@ public class A_1_20_2 {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(modentities.DINO.get(), NightstalkerRenderer::new);
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

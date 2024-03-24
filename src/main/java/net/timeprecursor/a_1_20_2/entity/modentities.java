@@ -15,7 +15,7 @@ public class modentities {
 
     public static final RegistryObject<EntityType<NightstalkerEntity>> DINO =
             ENTITY_TYPES.register("Dino", () -> EntityType.Builder.of(NightstalkerEntity::new, MobCategory.CREATURE)
-                    .sized(2.5f,2.5f).build("Dino"))
+                    .sized(2.5f,2.5f).build("Dino"));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
