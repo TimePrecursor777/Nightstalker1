@@ -123,6 +123,7 @@ public class nightstalkermodel<T extends Entity> extends HierarchicalModel<T> {
 
 		this.animateWalk(ModAnimationDefs.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(((NightstalkerEntity) entity).idleanimationstate, ModAnimationDefs.WALK, ageInTicks, 1f);
+		this.animate(((NightstalkerEntity) entity).attackanimationstate, ModAnimationDefs.ATTACK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float ageInTicks) {
