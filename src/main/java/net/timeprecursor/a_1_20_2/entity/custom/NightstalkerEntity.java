@@ -1,5 +1,9 @@
 package net.timeprecursor.a_1_20_2.entity.custom;
 
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializer;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -11,18 +15,26 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.timeprecursor.a_1_20_2.entity.ai.dinoattackgoal;
 import org.jetbrains.annotations.Nullable;
 
 public class NightstalkerEntity extends Animal {
+    private static final EntityDataAccessor<Boolean> ATTACKING =
+            SynchedEntityData.defineId(NightstalkerEntity.class, EntityDataSerializers.BOOLEAN);
+
     public NightstalkerEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
     public final AnimationState idleanimationstate = new AnimationState();
     private int idleanimationtimout = 0;
+
+    public final AnimationState attackanimationstate = new AnimationState();
+    public int attackanimationtimeout = 0;
 
     @Override
     public void tick() {
@@ -52,14 +64,38 @@ public class NightstalkerEntity extends Animal {
             f = 0;
         }
         this.walkAnimation.update(f, 0.2f);
+
+        if(this.isAttacking() && attackanimationtimeout <= 0){
+            attackanimationtimeout = 80;
+            attackanimationstate.start(this.tickCount);
+        }else {
+            --this.attackanimationtimeout;
+        }
+        if(!this.isAttacking()) {
+            attackanimationstate.stop();
+        }
+    }
+    public void setAttacking(boolean attacking) {
+        this.entityData.set(ATTACKING, attacking);
+    }
+
+    public boolean isAttacking() {
+        return this.entityData.get(ATTACKING);
+    }
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(ATTACKING, false);
     }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0,new FloatGoal(this));
-        this.goalSelector.addGoal(1,new WaterAvoidingRandomStrollGoal(this, 1.10));
-        this.goalSelector.addGoal(2,new LookAtPlayerGoal(this, Player.class, 10f));
-        this.goalSelector.addGoal(2,new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(1,new dinoattackgoal(this, 1.0D, true));
+        this.goalSelector.addGoal(2,new WaterAvoidingRandomStrollGoal(this, 1.10));
+        this.goalSelector.addGoal(3,new LookAtPlayerGoal(this, Player.class, 10f));
+        this.goalSelector.addGoal(4,new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
