@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.timeprecursor.a_1_20_2.A_1_20_2;
 import net.timeprecursor.a_1_20_2.entity.custom.NightstalkerEntity;
 
-public class NightstalkerRenderer extends MobRenderer<NightstalkerEntity, nightstalkermodel<NightstalkerEntity> {
+public class NightstalkerRenderer extends MobRenderer<NightstalkerEntity, nightstalkermodel<NightstalkerEntity>> {
     public NightstalkerRenderer(EntityRendererProvider.Context pContext) {
         super(pContext, new nightstalkermodel<>(pContext.bakeLayer(ModModelLayers.DINO_LAYER)), 2f);
     }
