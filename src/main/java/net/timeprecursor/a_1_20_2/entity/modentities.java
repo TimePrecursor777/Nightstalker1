@@ -14,8 +14,8 @@ public class modentities {
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, A_1_20_2.MODID);
 
     public static final RegistryObject<EntityType<NightstalkerEntity>> DINO =
-            ENTITY_TYPES.register("Dino", () -> EntityType.Builder.of(NightstalkerEntity::new, MobCategory.CREATURE)
-                    .sized(2.5f,2.5f).build("Dino"));
+            ENTITY_TYPES.register("dino", () -> EntityType.Builder.of(NightstalkerEntity::new, MobCategory.CREATURE)
+                    .sized(2.5f,2.5f).build("dino"));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

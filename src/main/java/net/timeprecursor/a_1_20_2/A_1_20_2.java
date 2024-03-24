@@ -40,15 +40,6 @@ import org.slf4j.Logger;
 public class A_1_20_2 {
 
 
-
-
-
-
-
-
-
-
-
     // Define mod id in a common place for everything to reference
     public static final String MODID = "a_1_20_2";
     // Directly reference a slf4j logger
