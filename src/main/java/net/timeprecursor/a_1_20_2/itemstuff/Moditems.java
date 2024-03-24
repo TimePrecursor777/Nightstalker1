@@ -22,7 +22,7 @@ public class Moditems {
         ITEMS.register(eventBus);
     }
 
-    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("Nightstalker_spawn_egg",
-            ()-> new ForgeSpawnEggItem(modentities.DINO, 0x7e9680, 0xc5d1c5,
-            new Item.Properties()));
-}
+//    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("Nightstalker_spawn_egg",
+//            ()-> new ForgeSpawnEggItem(modentities.DINO, 0x7e9680, 0xc5d1c5,
+//            new Item.Properties()));
+    }
