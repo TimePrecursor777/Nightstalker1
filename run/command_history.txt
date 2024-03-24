@@ -2,3 +2,8 @@
 /summon minecraft:allay
 /reload
 /reload files
+/summon a_1_20_2:dino
+/summon a_1_20_2:ino
+/summon a_1_20_2:Dino
+/summon a_1_20_2:dino -2.19 72.00 1.35
+/summon a_1_20_2:dino ~ ~ ~

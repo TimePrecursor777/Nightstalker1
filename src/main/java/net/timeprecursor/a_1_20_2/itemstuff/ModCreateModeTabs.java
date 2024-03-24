@@ -18,6 +18,7 @@ public class ModCreateModeTabs {
                 .displayItems((pParameters, pOutput) -> {
                 pOutput.accept(Moditems.SAPPHIRE.get());
                 pOutput.accept(Moditems.RAW_SAPPHIRE.get());
+                pOutput.accept(Moditems.RHINO_SPAWN_EGG.get());
                 })
                 .build());
     public static void register(IEventBus eventBus) {
