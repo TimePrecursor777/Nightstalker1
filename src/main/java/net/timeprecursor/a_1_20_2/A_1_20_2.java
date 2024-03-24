@@ -28,6 +28,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.timeprecursor.a_1_20_2.entity.modentities;
 import net.timeprecursor.a_1_20_2.itemstuff.ModCreateModeTabs;
 import net.timeprecursor.a_1_20_2.itemstuff.Moditems;
 import org.slf4j.Logger;
@@ -79,7 +80,7 @@ public class A_1_20_2 {
         //MY STUFF-----
         ModCreateModeTabs.register(modEventBus);
         Moditems.register(modEventBus);
-
+        modentities.register(modEventBus);
 
 
 
